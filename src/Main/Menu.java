@@ -4,12 +4,14 @@ import java.io.IOException;
 
 public class Menu {
 
-	public Menu(){
+	public Menu() throws IOException{
 
-		try {
-			new Lecture();
-		} catch (IOException e) {
-			e.printStackTrace();
+		Lecture l = new Lecture();
+		if(l.Vision() == 1){
+			//Mettre ici la suite du developpement du code
+		}
+		else{
+			System.out.println("Impossible de lire votre fichier");
 		}
 	}
 
